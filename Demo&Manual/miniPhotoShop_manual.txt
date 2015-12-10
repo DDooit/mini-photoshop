@@ -1,16 +1,25 @@
-1. ÇÁ·ÎÁ§Æ®¸í : odhPhotoShop
-2. ±â´É : ÀÌ¹ÌÁö ÆÄÀÏÀ» ºÒ·¯¿Í¼­ °£´ÜÇÑ Æ÷Åä¼¥ ±â´ÉÀ» ¼öÇà
+1. Project Name : odhPhotoShop
+2. ê¸°ëŠ¥ : ì´ë¯¸ì§€ íŒŒì¼ì„ ë¶ˆëŸ¬ì™€ì„œ ê°„ë‹¨í•œ í¬í† ìƒµ ê¸°ëŠ¥ì„ ìˆ˜í–‰
+2. function : get image file, perform simple photoshop func
 
-# Tizen Web Simulator ApplicationÀ¸·Î ¼öÇà½ÃÄÑ ÁÖ¼¼¿ä. #
+# Tizen Web Simulator Applicationìœ¼ë¡œ ìˆ˜í–‰ì‹œì¼œ ì£¼ì„¸ìš”. #
+# Please Perform with Tizen Web Simulator Application. #
 
-3. »ç¿ë °úÁ¤
+3. ì‚¬ìš© ê³¼ì •
+3. Manual
 
-ÆÄÀÏÀ» ¼±ÅÃÇØ¼­ ÀÌ¹ÌÁö ÆÄÀÏÀ» ºÒ·¯µéÀÌ¸é »ó´Ü¿¡ ÀÌ¹ÌÁö°¡ ¶á´Ù.
+íŒŒì¼ì„ ì„ íƒí•´ì„œ ì´ë¯¸ì§€ íŒŒì¼ì„ ë¶ˆëŸ¬ë“¤ì´ë©´ ìƒë‹¨ì— ì´ë¯¸ì§€ê°€ ëœ¬ë‹¤.
+Select a Image File, then the image will be set on the upper area.
 
-ÁÖ¾îÁø Æ÷Åä¼¥ ±â´ÉÀÇ ¹öÆ°À» ´©¸£¸é ÇÏ´Ü¿¡ ±â´ÉÀÌ Àû¿ëµÈ ÀÌ¹ÌÁö°¡ ¶á´Ù.
+ì£¼ì–´ì§„ í¬í† ìƒµ ê¸°ëŠ¥ì˜ ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ í•˜ë‹¨ì— ê¸°ëŠ¥ì´ ì ìš©ëœ ì´ë¯¸ì§€ê°€ ëœ¬ë‹¤.
+If you click photoshop func button, The changed image will be set on the lower area.
 
-Save Image FileÀ» ´©¸£¸é ·ÎÄÃ¿¡ ÀÌ¹ÌÁö°¡ ÀúÀåµÈ´Ù. (PC)
--> ÀúÀåµÉ ¶§ ÇÏ´Ü¿¡ Ç¥½ÃµÇ¹Ç·Î ´©¸£¸é Æ÷Åä¼¥ÀÌ Àû¿ëµÈ ÀÌ¹ÌÁö¸¦ È®ÀÎÇÒ ¼ö ÀÖ´Ù.
+Save Image Fileì„ ëˆ„ë¥´ë©´ ë¡œì»¬ì— ì´ë¯¸ì§€ê°€ ì €ì¥ëœë‹¤. (PC)
+If you click the Save Image File, It will be saved in local (only available in PC)
+-> ì €ì¥ë  ë•Œ í•˜ë‹¨ì— í‘œì‹œë˜ë¯€ë¡œ ëˆ„ë¥´ë©´ í¬í† ìƒµì´ ì ìš©ëœ ì´ë¯¸ì§€ë¥¼ í™•ì¸í•  ìˆ˜ ìˆë‹¤.
+-> When the image file is saved, It will be showed saved file on the lower area of browser,
+ then you can check the changed image.
 
-(¿©·¯ ¹öÆ°À» ¿¬¼ÓÇØ¼­ Àû¿ë½ÃÅ³ ¶§ °á°ú ÀÌ¹ÌÁö°¡ ºñÁ¤»óÀûÀ¸·Î Ãâ·ÂµÉ ¼ö ÀÖÀ¸¹Ç·Î
-´Ù¸¥ ±â´ÉÀÇ ¹öÆ°À» ´©¸¦ ¶§ Àá±ñÀÇ ½Ã°£À» µÎ°í ´©¸£¸é Á¤»óÀûÀ¸·Î ÀÛµ¿ÇÑ´Ù.)
+(ì—¬ëŸ¬ ë²„íŠ¼ì„ ì—°ì†í•´ì„œ ì ìš©ì‹œí‚¬ ë•Œ ê²°ê³¼ ì´ë¯¸ì§€ê°€ ë¹„ì •ìƒì ìœ¼ë¡œ ì¶œë ¥ë  ìˆ˜ ìˆìœ¼ë¯€ë¡œ
+ë‹¤ë¥¸ ê¸°ëŠ¥ì˜ ë²„íŠ¼ì„ ëˆ„ë¥¼ ë•Œ ì ê¹ì˜ ì‹œê°„ì„ ë‘ê³  ëˆ„ë¥´ë©´ ì •ìƒì ìœ¼ë¡œ ì‘ë™í•œë‹¤.)
+(When you click several buttons repeatedly, Please click the button at regular intervals.)
