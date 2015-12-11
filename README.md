@@ -11,6 +11,7 @@ and the image will be changed when you click the function buttons in list.
 
 If you want to know detailed instructions, 
 Please refer the Demo&Manual folder.
+
 ( https://github.com/DDooit/mini-photoshop/tree/master/Demo%26Manual )
 
 Thanks.
