@@ -173,6 +173,14 @@
 	    this.href = dt;
 	    //alert("success");
 	}
+
+	function download_mobile() {
+		tizen.filesystem.resolve('/opt/apps/trial/data', function(dir) {
+			dir.listFiles(onsuccess, onerror);
+		}, function(e) {
+			alert("error" + e.message);
+		}, "rw");
+	}
 	
     </script>
 </head>
