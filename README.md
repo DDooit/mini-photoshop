@@ -1,10 +1,15 @@
 # mini-photoshop
 
 This is Tizen mini Photoshop!
-I used pixastic library in order to add image processing functions.
-You can open a local image file,
-and the image will be changed when click the function buttons.
 
-Please consult the Demo&Manual folder.
+Using Library : pixastic
+
+Use of library : Image Processing
+
+You can open a local image file,
+and the image will be changed when you click the function buttons in list.
+
+If you want to know detailed instructions, 
+Please refer the Demo&Manual folder.
 
 Thanks.
