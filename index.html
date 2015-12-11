@@ -61,45 +61,52 @@
     
     <script>
     
+	// When application is loaded
     window.onload = function() {
     	setPhotoShop();
     }
 
+	// When image process button is clicked
 	function doPixasticFunc(test) {
-		var img = document.getElementById("show-Pic");
+		var img = document.getElementById("show-Pic"); //input image (original size)
+		// output image : view mode
 		var canvas = document.getElementById("output-canvas");
+		// output image : save mode
 		save_canvas = document.getElementById("save-canvas");
 		var ctx = canvas.getContext("2d");
 		save_ctx = save_canvas.getContext("2d");
-		var P;
+		var P; 
 
 		canvas.style.display = "none";
-		canvas.width = 200;//img.width;
-		canvas.height = 150;//img.height;
-		canvas.title = test.effect;
+		canvas.width = 200; // set temp width
+		canvas.height = 150; // set temp height
+		canvas.title = test.effect; // image process func name
 		
 		save_canvas.style.display = "none";
-		save_canvas.width = img.width;
-		save_canvas.height = img.height;
+		save_canvas.width = img.width; // original width
+		save_canvas.height = img.height; // original height
 		
 		var sx = img.width * (130/img.height);
 		var sy = 130;
 
-		//var px = sx / 2;
-		//var py = sy / 2;
 		px = (canvas.width - sx) / 2;
-		py = (canvas.height - sy) / 2;
+		// py = (canvas.height - sy) / 2;
 		save_ctx.drawImage(img, 0, 0, img.width, img.height);
+		// set the coordinate of view image
 		ctx.drawImage(img, 0, 0, img.width, img.height, px, 0, sx, sy);
 
+		// set the image file name to save
 		var filepath = document.getElementById("take-Pic").value.split("\\");
 		var filename = filepath[2].split(".");
 		var filename = "edit_" + filename[0] + ".png";
 
+		// set download func (browser)
 		var saveSkill = document.getElementById("downloadLnk");
 		saveSkill.setAttribute("download", filename);
 		
 		P = new Pixastic(ctx);
+		// Apply image processing func
+		// After image processing applied, you can save file by click text "Save Image File" in simulator
 		P[test.effect](test.options).done(function() {
 			canvas.style.display = "block";	
 			downloadLnk.addEventListener('click', download_pc, false);
@@ -114,28 +121,29 @@
 	}
     
 	function setPhotoShop() {
-
+		
+		// set image processing func
 		var tests = [ { 
-				effect : "findedges"
+				effect : "findedges" // processing func 1
 				}, { 
-		    	effect : 'mosaic', 
+		    	effect : 'mosaic', // processing func 2
 				options : { 
 					blockSize : 8 
 			    	} 
 				}, { 
-				effect : "emboss", 
+				effect : "emboss", // processing func 3
 				options : { 
 				    amount : 0.5, 
 				    angle : 135 / 180 * Math.PI 
 				    } 
 				}, { 
-				effect : 'equalize', 
+				effect : 'equalize', // processing func 4
 				options : { 
 				    } 
 				}, {
-				effect : "invert"
+				effect : "invert" // processing func 5
 				}, {
-				effect : "noise", 
+				effect : "noise", // processing func 6
 				options : { 
 				     amount : 0.5, 
 				     strength : 0.5, 
@@ -148,7 +156,7 @@
 		var ul = document.getElementById("testlist");
 		var li;
 
-		
+		// create image processing list
 		for(var i=0; i<tests.length; i++) {
 			li = document.createElement("li");
 			li.innerHTML = tests[i].effect;
@@ -156,6 +164,7 @@
 			ul.appendChild(li);
 		}
 
+		// When click, perform image processing
 		ul.addEventListener("click", function(e) {
 			var target = e.target || e.srcElement;
 			var test;
@@ -166,6 +175,7 @@
 		}, false)
 	}
 
+	// save the changed image
 	function download_pc() {
 		var canvas = document.getElementById("save-canvas");
 		
@@ -186,15 +196,12 @@
 	    </form>
     </div>
     <div>
-    	<!-- <text id="test">test</text> -->
-    	
     	<div style="text-align:center;"><ul id="testlist"></ul></div>
     	<div id="canvasArea" align="center">
     		<a id="downloadLnk">Save Image File</a> 
     		<canvas id="output-canvas" style="display:none;"></canvas>
     		<canvas id="save-canvas" style="display:none;"></canvas>
-    	</div>
-    	
+    	</div>    	
     </div>
     
     <script>
@@ -207,6 +214,8 @@
         
         if(takePic && showPic) {
 			// runs when you use input
+			// If selected file is exist,
+			// Get the selected image file on the display area.
 			takePic.onchange = function (swap) {
 				var files = swap.target.files;
 				var file;
@@ -220,7 +229,6 @@
 						};
 						fileReader.readAsDataURL(file);	
 						console.log("file",file);
-						//setPhotoShop();
 					}
 					catch(e) {
 						showPic.alt = "error";
