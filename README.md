@@ -14,7 +14,7 @@ Please refer the Demo&Manual folder.
 
 ( https://github.com/DDooit/mini-photoshop/tree/master/Demo%26Manual )
 
-<commit log>    
+# commit log #       
 main source code : index.html   
 library (pixastic) :   
 pixastic.effect.js     
