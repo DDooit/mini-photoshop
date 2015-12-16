@@ -24,10 +24,8 @@ pixastic.worker.js
 styles.css   
 
 
-<< 1216 Edit >>
-
-Delete Save function
-
+<< 1216 Edit >>  
+Delete [Save function]  
 Because This function is not performed in mobile.
  
 Thanks.
