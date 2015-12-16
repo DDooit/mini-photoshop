@@ -124,26 +124,26 @@
 		
 		// set image processing func
 		var tests = [ { 
-				effect : "findedges"
+				effect : "findedges" // processing func 1
 				}, { 
-		    	effect : 'mosaic', 
+		    	effect : 'mosaic', // processing func 2
 				options : { 
 					blockSize : 8 
 			    	} 
 				}, { 
-				effect : "emboss", 
+				effect : "emboss", // processing func 3
 				options : { 
 				    amount : 0.5, 
 				    angle : 135 / 180 * Math.PI 
 				    } 
 				}, { 
-				effect : 'equalize', 
+				effect : 'equalize', // processing func 4
 				options : { 
 				    } 
 				}, {
-				effect : "invert"
+				effect : "invert" // processing func 5
 				}, {
-				effect : "noise", 
+				effect : "noise", // processing func 6
 				options : { 
 				     amount : 0.5, 
 				     strength : 0.5, 
